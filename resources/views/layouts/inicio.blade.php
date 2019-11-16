@@ -12,10 +12,9 @@
                     <div class="col-lg-12">
                         <!-- hero slider content -->
                         <div class="hero-slider-content hero-slider-content--extra-space">
-                            <h3 class="hero-slider-content__subtitle">Brenda</h3>
-                            <h2 class="hero-slider-content__title space__bottom--50">We Construct your Dream in
-                                Live</h2>
-                            <a href="contact.html" class="default-btn default-btn--hero-slider">Contact Us</a>
+                            <h3 class="hero-slider-content__subtitle">Somos proveedores autorizados</h3>
+                            <h2 class="hero-slider-content__title space__bottom--50">De diferentes marcas a nivel internacioal</h2>
+                            <a href="contact.html" class="default-btn default-btn--hero-slider">Ver Servicios</a>
                         </div>
                     </div>
                 </div>
@@ -28,10 +27,9 @@
                     <div class="col-lg-12">
                         <!-- hero slider content -->
                         <div class="hero-slider-content hero-slider-content--extra-space">
-                            <h3 class="hero-slider-content__subtitle">Brenda</h3>
-                            <h2 class="hero-slider-content__title space__bottom--50">We Construct your Dream in
-                                Live</h2>
-                            <a href="contact.html" class="default-btn default-btn--hero-slider">Contact Us</a>
+                            <h3 class="hero-slider-content__subtitle">Alfa y Omega Servicios industriales</h3>
+                            <h2 class="hero-slider-content__title space__bottom--50">Expertos en equipo de demolicion</h2>
+                            <a href="contact.html" class="default-btn default-btn--hero-slider">Contactanos</a>
                         </div>
                     </div>
                 </div>
