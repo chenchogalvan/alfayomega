@@ -240,7 +240,7 @@
                     <div class="col-lg-3 col-md-6">
                         <h5
                             class="footer-widget__title space__top--15 space__bottom--20 space__top__md--40 space__top__lm--40">
-                            Contact us</h5>
+                            Contactanos</h5>
                         <div class="footer-contact-wrapper">
                             <div class="single-footer-contact">
                                 <div class="single-footer-contact__icon"><i class="fa fa-map-marker"></i></div>
@@ -267,8 +267,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <p class="copyright-text">Copyright &copy; <a href="#">Codecarnival</a>, All Rights Reserved -
-                            2019</p>
+                        <p class="copyright-text">Copyright &copy;2019 Alfa y Omega Servicios industriales | <a href="#">Made by ClusterMX</a></p>
                     </div>
                 </div>
             </div>
