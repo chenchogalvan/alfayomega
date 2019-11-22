@@ -38,3 +38,7 @@ Route::group(['prefix' => '/equipo-de-demolicion'], function () {
 Route::get('/contacto', function () {
     return view('layouts.contacto');
 })->name('contacto');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
