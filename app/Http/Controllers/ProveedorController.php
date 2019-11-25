@@ -47,11 +47,8 @@ class ProveedorController extends Controller
         $request->imgPortada = $request->file('imgPortada')->store('public/portadaProveedores');
         Proveedor::create($request->all());
 
-        $proveedor = new Proveedor();
-        $proveedor->url = str_slug($request->name);
-        $proveedor->save();
 
-        return $request->url;
+        return 'Todo bien';
     }
 
     /**

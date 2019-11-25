@@ -10,6 +10,12 @@ class Proveedor extends Model
 
     public function getRouteKeyName()
     {
-        return 'slug';
+        return 'url';
+    }
+
+    public function setNameAttribute($name)
+    {
+        $this->attributes['name'] = $name;
+        $this->attributes['url'] = str_slug($name);
     }
 }
