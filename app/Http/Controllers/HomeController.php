@@ -23,6 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('nebula.dashboard');
+    }
+
+    public function agregarProveedor()
+    {
+        return view('nebula.proveedor');
     }
 }

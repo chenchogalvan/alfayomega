@@ -42,3 +42,10 @@ Route::get('/contacto', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'nebula'], function () {
+    Route::get('/', 'HomeController@index')->name('nebula.dashboard');
+
+    Route::get('/agregar-proveedores','HomeController@agregarProveedor')->name('nebula.proveedores');
+    Route::resource('/addProveedors', 'ProveedorController');
+});

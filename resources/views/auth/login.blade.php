@@ -119,8 +119,8 @@
             <div class="auth-box">
                 <div id="loginform">
                     <div class="logo">
-                        <span class="db"><img src="../../assets/images/logo-icon.png" alt="logo" /></span>
-                        <h5 class="font-medium m-b-20">Sign In to Admin</h5>
+                        <span class="db"><img src="/images/logo2.png" style="height: 70px;" alt="logo" /></span>
+                        <h5 class="font-medium m-b-20">Entrar a nebula</h5>
                     </div>
                     <!-- Form -->
                     <div class="row">
@@ -133,27 +133,27 @@
                                     <label for="email">Email</label>
                                 </div>
 
-                @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <!-- pwd -->
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="password" type="password" class="validate @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                     <label for="password">Password</label>
-
-                @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
                                 </div>
+
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <!-- pwd -->
-                            <div class="row m-t-5">
+                            {{-- <div class="row m-t-5">
                                 <div class="col s7">
                                     <label>
                                         <input type="checkbox" />
@@ -162,24 +162,24 @@
                                 </div>
                                 <div class="col s5 right-align"><a href="#" class="link" id="to-recover">Forgot Pwd?</a>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!-- pwd -->
                             <div class="row m-t-40">
                                 <div class="col s12">
-                                    <button class="btn-large w100 blue accent-4" type="submit">Login</button>
+                                    <button class="btn-large w100 blue accent-4" type="submit">Entrar</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="center-align m-t-20 db">
+                    {{-- <div class="center-align m-t-20 db">
                         <a href="#" class="btn indigo darken-1 tooltipped m-r-5" data-position="top"
                             data-tooltip="Login with Facebook"><i class="fab fa-facebook-f"></i></a> <a href="#"
                             class="btn orange darken-4 tooltipped" data-position="top"
                             data-tooltip="Login with Facebook"><i class="fab fa-google-plus-g"></i></a>
-                    </div>
-                    <div class="center-align m-t-20 db">
+                    </div> --}}
+                    {{-- <div class="center-align m-t-20 db">
                         Don't have an account? <a href="authentication-register1.html">Sign Up!</a>
-                    </div>
+                    </div> --}}
                 </div>
                 <div id="recoverform">
                     <div class="logo">
