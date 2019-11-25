@@ -43,12 +43,13 @@ class ProveedorController extends Controller
                 'longDesc'  => 'required',
         ]);
 
-        $request->imgLogo = $request->file('imgLogo')->store('public/logosProveedores');
-        $request->imgPortada = $request->file('imgPortada')->store('public/portadaProveedores');
-        Proveedor::create($request->all());
+        $proveedor = Proveedor::create($request->all());
+        $proveedor->imgLogo = $request->file('imgLogo')->store('public/logosProveedores');
+        $proveedor->imgPortada = $request->file('imgPortada')->store('public/portadaProveedores');
+        $proveedor->save();
 
 
-        return 'Todo bien';
+        return redirect()->back()->with('success', " ");
     }
 
     /**

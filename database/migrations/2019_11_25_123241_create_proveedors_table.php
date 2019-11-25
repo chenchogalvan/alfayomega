@@ -17,8 +17,8 @@ class CreateProveedorsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('url')->nullable();
-            $table->string('imgLogo');
-            $table->string('imgPortada');
+            $table->string('imgLogo')->nullable();
+            $table->string('imgPortada')->nullable();
             $table->text('shortDesc');
             $table->text('longDesc');
             $table->string('show')->default('yes');
