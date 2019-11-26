@@ -152,6 +152,20 @@
                 <!-- service slider -->
                 <div class="row service-slider-wrapper space__bottom__md--40 space__bottom__lm--40">
 
+                    @foreach ($proveedores as $proveedor)
+                        <div class="col single-service text-center">
+                            <div class="single-service__image space__bottom--15">
+                                <a href="{{ route('proveedores', $proveedor) }}"><img src="{{ Storage::url($proveedor->imgLogo) }}" class="img-fluid" alt=""></a>
+                            </div>
+                            <h4 class="single-service__content text-uppercase">
+                                <a href="{{ route('proveedores', $proveedor) }}">{{ $proveedor->name }}</a>
+                            </h4>
+                        </div>
+
+                        @endforeach
+
+
+{{--
                     <div class="col single-service text-center">
                         <div class="single-service__image space__bottom--15">
                             <a href="#"><img src="/images/proveedores/rammer.jpg" class="img-fluid" alt=""></a>
@@ -258,7 +272,8 @@
                         <h4 class="single-service__content text-uppercase">
                             <a href="#">weg</a>
                         </h4>
-                    </div>
+                    </div> --}}
+
 
                 </div>
             </div>

@@ -52,19 +52,11 @@
                     <div class="content space__top--30">
                         <div class="row">
                             <div class="col-12">
-                                <h3 class="space__bottom--15">Rammer</h3>
-                                <p>Somos distribuidores directos en la república mexicana y contamos con Refacciones
-                                    reparaciones y centro de servicio de martillos hidráulicos
-                                    contamos con la dos líneas de martillos Rammer que es EXCELLENCE LINE y performance
-                                    Line, como
-                                    otros más Equipos de demolición para Scrap Shears, brazos, y unidades de potencia,
-                                    todos esto
-                                    para la minería e industria de la construcción, los equipos Rammer, están diseñados
-                                    para ser
-                                    instalados en diferentes sistemas móviles y estacionarios, y contamos con piezas
-                                    para refacciona
-                                    miento, y aditamentos para construcción y demolición.</p>
+                                <h3 class="space__bottom--15">{{ $proveedor->name }}</h3>
+                                <p>{{ $proveedor->longDesc }}</p>
                             </div>
+
+
 
                             <div class="col-lg-12" style="margin-top:50px;">
                                 <div class="project-item-wrapper space__bottom--m40">
@@ -100,12 +92,11 @@
                 <div class="sidebar">
                     <h3 class="sidebar-title">Martillos y equipo de construccion</h3>
                     <ul class="sidebar-list">
-                        <li><a href="#"><i class="fa fa-check"></i>Rammer</a></li>
-                        <li><a href="#"><i class="fa fa-check"></i>Bretec</a></li>
-                        <li><a href="#"><i class="fa fa-check"></i>Webtec</a></li>
-                        <li><a href="#"><i class="fa fa-check"></i>Bandwin Filters</a></li>
-                        <li><a href="#"><i class="fa fa-check"></i>Allied</a></li>
-                        <li><a href="#"><i class="fa fa-check"></i>Parker</a></li>
+                        @forelse ($prov as $prov)
+                        <li><a href="{{ route('proveedores', $prov) }}"><i class="fa fa-check"></i>{{ $prov->name }}</a></li>
+                        @empty
+
+                        @endforelse
                     </ul>
                 </div>
                 <div class="sidebar">

@@ -65,143 +65,32 @@
             <div class="col-lg-12">
                 <div class="service-item-wrapper space__bottom--m40">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-12 space__bottom--40">
-                            <div class="service-grid-item">
-                                <div class="service-grid-item__image">
-                                    <div class="service-grid-item__image-wrapper">
-                                        <a href="{{ route('rammer') }}">
-                                            <img src="/images/proveedores/rammer.jpg" class="img-fluid" alt="">
-                                        </a>
+                        @forelse ($proveedores as $proveedor)
+                            <div class="col-lg-4 col-md-6 col-12 space__bottom--40">
+                                <div class="service-grid-item">
+                                    <div class="service-grid-item__image">
+                                        <div class="service-grid-item__image-wrapper">
+                                            <a href="{{ route('proveedores', $proveedor) }}">
+                                                <img src="{{ Storage::url($proveedor->imgLogo) }}" class="img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="flaticon-002-welding"></i>
+                                        </div>
                                     </div>
-                                    <div class="icon">
-                                        <i class="flaticon-002-welding"></i>
+                                    <div class="service-grid-item__content">
+                                        <h3 class="title">
+                                            <a href="{{ route('proveedores', $proveedor) }}">{{ $proveedor->name }}</a>
+                                        </h3>
+                                        <p class="subtitle">{{ $proveedor->shortDesc }}</p>
+                                        <a href="{{ route('proveedores', $proveedor) }}" class="see-more-link">Ver más</a>
                                     </div>
-                                </div>
-                                <div class="service-grid-item__content">
-                                    <h3 class="title">
-                                        <a href="{{ route('rammer') }}">Rammer</a>
-                                    </h3>
-                                    <p class="subtitle">Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm
-                                        tempor</p>
-                                    <a href="{{ route('rammer') }}" class="see-more-link">Ver más</a>
                                 </div>
                             </div>
-                        </div>
+                        @empty
 
-                        <div class="col-lg-4 col-md-6 col-12 space__bottom--40">
-                            <div class="service-grid-item">
-                                <div class="service-grid-item__image">
-                                    <div class="service-grid-item__image-wrapper">
-                                        <a href="{{ route('rammer') }}">
-                                            <img src="/images/proveedores/bretec.jpg" class="img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="flaticon-002-welding"></i>
-                                    </div>
-                                </div>
-                                <div class="service-grid-item__content">
-                                    <h3 class="title">
-                                        <a href="{{ route('rammer') }}">Bretec</a>
-                                    </h3>
-                                    <p class="subtitle">Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm
-                                        tempor</p>
-                                    <a href="{{ route('rammer') }}" class="see-more-link">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforelse
 
-                        <div class="col-lg-4 col-md-6 col-12 space__bottom--40">
-                            <div class="service-grid-item">
-                                <div class="service-grid-item__image">
-                                    <div class="service-grid-item__image-wrapper">
-                                        <a href="{{ route('rammer') }}">
-                                            <img src="/images/proveedores/webtec.jpg" class="img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="flaticon-002-welding"></i>
-                                    </div>
-                                </div>
-                                <div class="service-grid-item__content">
-                                    <h3 class="title">
-                                        <a href="{{ route('rammer') }}">Webtec</a>
-                                    </h3>
-                                    <p class="subtitle">Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm
-                                        tempor</p>
-                                    <a href="{{ route('rammer') }}" class="see-more-link">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12 space__bottom--40">
-                            <div class="service-grid-item">
-                                <div class="service-grid-item__image">
-                                    <div class="service-grid-item__image-wrapper">
-                                        <a href="{{ route('rammer') }}">
-                                            <img src="/images/proveedores/baldwind.jpg" class="img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="flaticon-002-welding"></i>
-                                    </div>
-                                </div>
-                                <div class="service-grid-item__content">
-                                    <h3 class="title">
-                                        <a href="{{ route('rammer') }}">Baldwin Filters</a>
-                                    </h3>
-                                    <p class="subtitle">Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm
-                                        tempor</p>
-                                    <a href="{{ route('rammer') }}" class="see-more-link">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12 space__bottom--40">
-                            <div class="service-grid-item">
-                                <div class="service-grid-item__image">
-                                    <div class="service-grid-item__image-wrapper">
-                                        <a href="{{ route('rammer') }}">
-                                            <img src="/images/proveedores/allied.jpg" class="img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="flaticon-002-welding"></i>
-                                    </div>
-                                </div>
-                                <div class="service-grid-item__content">
-                                    <h3 class="title">
-                                        <a href="{{ route('rammer') }}">Allied</a>
-                                    </h3>
-                                    <p class="subtitle">Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm
-                                        tempor</p>
-                                    <a href="{{ route('rammer') }}" class="see-more-link">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12 space__bottom--40">
-                            <div class="service-grid-item">
-                                <div class="service-grid-item__image">
-                                    <div class="service-grid-item__image-wrapper">
-                                        <a href="{{ route('rammer') }}">
-                                            <img src="/images/proveedores/parker.jpg" class="img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="flaticon-002-welding"></i>
-                                    </div>
-                                </div>
-                                <div class="service-grid-item__content">
-                                    <h3 class="title">
-                                        <a href="{{ route('rammer') }}">Parker</a>
-                                    </h3>
-                                    <p class="subtitle">Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm
-                                        tempor</p>
-                                    <a href="{{ route('rammer') }}" class="see-more-link">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -11,8 +11,11 @@
 |
 */
 
+use App\Proveedor;
+
 Route::get('/', function () {
-    return view('layouts.inicio');
+    $proveedores = Proveedor::where('show', 'yes')->get();
+    return view('layouts.inicio', compact('proveedores'));
 });
 
 Route::get('/servicios', function(){
@@ -26,12 +29,15 @@ Route::get('/equipo-de-demolicion', function () {
 Route::group(['prefix' => '/equipo-de-demolicion'], function () {
 
     Route::get('/', function () {
-        return view('layouts.equipo');
+        $proveedores = Proveedor::where('show', 'yes')->get();
+
+        return view('layouts.equipo', compact('proveedores'));
     })->name('equipo');
 
-    Route::get('/rammer', function () {
-        return view('layouts.rammer');
-    })->name('rammer');
+    Route::get('/{proveedor}', function (Proveedor $proveedor) {
+        $prov = Proveedor::where('show', 'yes')->get();
+        return view('layouts.rammer', compact(['proveedor', 'prov']));
+    })->name('proveedores');
 
 });
 
@@ -48,4 +54,8 @@ Route::group(['prefix' => 'nebula'], function () {
 
     Route::get('/agregar-proveedores','HomeController@agregarProveedor')->name('nebula.proveedores');
     Route::resource('/addProveedors', 'ProveedorController');
+
+
+    Route::get('/agregar-productos', 'HomeController@agregarProductos')->name('nebula.productos');
+    Route::resource('/addProducts', 'ProductController');
 });

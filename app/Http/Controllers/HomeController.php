@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
+use App\Proveedor;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,5 +31,13 @@ class HomeController extends Controller
     public function agregarProveedor()
     {
         return view('nebula.proveedor');
+    }
+
+
+    public function agregarProductos()
+    {
+        $productos = Product::where('show', 'yes')->get();
+        $proveedores = Proveedor::where('show', 'yes')->get();
+        return view ('nebula.productos', compact(['productos', 'proveedores']));
     }
 }

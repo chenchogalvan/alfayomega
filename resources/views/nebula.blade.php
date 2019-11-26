@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/admin/images/favicon.png">
     <title>Materialart Admin Template</title>
     <link href="/assets/admin/css/style.css" rel="stylesheet">
+
+    @stack('css')
     <!-- This page CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -96,11 +98,51 @@
                             <div class="collapsible-body">
                                 <ul>
                                     <li><a href="{{ route('nebula.proveedores') }}"><i class="material-icons">person_add</i><span class="hide-menu">Nuevo</span></a></li>
+                                    <li><a href="#"><i class="fas fa-search"></i><span class="hide-menu">Ver proveedores</span></a></li>
 
-                                    <li><a href="inbox-compose.html"><i class="material-icons">contact_mail</i><span class="hide-menu">Email Compose</span></a></li>
                                 </ul>
                             </div>
                         </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fas fa-cogs"></i><span class="hide-menu"> Servicios y productos</span></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#"><i class="fas fa-plus"></i><span class="hide-menu">Agregar servicio</span></a></li>
+                                    <li><a href="{{ route('nebula.productos') }}"><i class="fas fa-plus"></i><span class="hide-menu">Agregar producto</span></a></li>
+                                    <li><a href="#"><i class="fas fa-search"></i><span class="hide-menu">Ver servicios y productos</span></a></li>
+
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fas fa-file"></i><span class="hide-menu"> Extras</span></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#"><i class="fas fa-plus"></i><span class="hide-menu">Agregar galeria</span></a></li>
+                                    <li><a href="#"><i class="fas fa-search"></i><span class="hide-menu">Ver extras</span></a></li>
+
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fas fa-list-alt"></i><span class="hide-menu"> Secciones</span></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#"><i class="fas fa-check"></i><span class="hide-menu">Acerca de nosotros</span></a></li>
+                                    <li><a href="#"><i class="fas fa-check"></i><span class="hide-menu">Misión, Visión, Objetivo</span></a></li>
+                                    <li><a href="#"><i class="fas fa-check"></i><span class="hide-menu">Testimoniales</span></a></li>
+
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="small-cap"><span class="hide-menu">Información de contacto</span></li>
                     </ul>
                 </li>
             </ul>
@@ -148,6 +190,8 @@
     <!-- ============================================================== -->
     <!-- This page plugin js -->
     <!-- ============================================================== -->
+
+    @stack('js')
 </body>
 
 </html>
