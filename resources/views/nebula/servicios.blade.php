@@ -6,30 +6,17 @@
         <div class="col s12 l6 m6">
             <div class="card">
                 <div class="card-content">
-                    <h5 class="card-title activator">Agregar productos<i class="material-icons right tooltipped" data-position="left" data-delay="50" data-tooltip="Agrega un nuevo producto a un proveedor">help</i></h5>
-                    <form method="POST" action="{{ route('addProducts.store') }}" enctype="multipart/form-data">
+                    <h5 class="card-title activator">Agregar servicios<i class="material-icons right tooltipped" data-position="left" data-delay="50" data-tooltip="Agrega un nuevo producto a un proveedor">help</i></h5>
+                    <form method="POST" action="{{ route('addServices.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="first_name" name="name" type="text">
+                                <input id="first_name" name="title" type="text">
                                 <label for="first_name">Nombre</label>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <div class="errorTxt1">
                                         <div id="uname-error" class="error">{{ $errors->first('name') }}</div>
-                                    </div>
-                                </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="first_name" name="url" type="text">
-                                <label for="first_name">URL</label>
-                                @error('url')
-                                <span class="invalid-feedback" role="alert">
-                                    <div class="errorTxt1">
-                                        <div id="uname-error" class="error">{{ $errors->first('url') }}</div>
                                     </div>
                                 </span>
                                 @enderror
@@ -56,32 +43,16 @@
                                 @enderror
                         </div>
                         <div class="row">
-                            <div class="col s12">
-                                <div class="file-field input-field">
-                                    <div class="btn">
-                                        <span>Imagen</span>
-                                        <input type="file" name="img">
-                                    </div>
-                                    <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text" placeholder="Imagen de portada o descriptiva">
-                                    </div>
-                                </div>
-                                 @error('img')
+                            <div class="input-field col s12">
+                                <input id="first_name" name="longDesc" type="text">
+                                <label for="first_name">Descripción</label>
+                                @error('shortDesc')
                                 <span class="invalid-feedback" role="alert">
                                     <div class="errorTxt1">
-                                        <div id="uname-error" class="error">{{ $errors->first('img') }}</div>
+                                        <div id="uname-error" class="error">{{ $errors->first('shortDesc') }}</div>
                                     </div>
                                 </span>
                                 @enderror
-                            </div>
-                        </div>
-
-                        <h6 class="font-medium" style="margin-top:20px;">Campos opcionales</h6>
-
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="first_name" name="shortDesc" type="text">
-                                <label for="first_name">Descripción</label>
                             </div>
                         </div>
 
@@ -103,9 +74,8 @@
                     <table id="demo-foo-addrow2" class="table table-bordered table-hover toggle-circle" data-page-size="7">
                         <thead>
                             <tr>
-                                <th data-sort-initial="true" data-toggle="true">Nombre</th>
-                                <th>Estado</th>
-                                <th data-sort-ignore="true" class="min-width">Acción</th>
+                                <th data-sort-initial="true" data-toggle="true">Titulo</th>
+                                <th>Descripción</th>
                             </tr>
                         </thead>
                         <div class="m-t-40">
@@ -121,11 +91,9 @@
                             @forelse ($productos as $prov)
                                 <tr>
                                     <td>
-                                        <div class="chip">
-                                            <img src="{{ Storage::url($prov->img) }}" alt="Contact Person"> {{ $prov->name }}
-                                        </div>
+                                        {{ $prov->title }}
                                     </td>
-                                    <td><span class="label label-table {{ $prov->show == 'yes' ? 'label-success' : 'label-danger' }}">{{ $prov->show == 'yes' ? 'Activo' : 'Inactivo' }}</span> </td>
+                                    <td>{{ $prov->longDesc }} </td>
                                     <td>
                                         <button type="button" class="btn btn-small btn-outline delete-row-btn"><i class="ti-close" aria-hidden="true"></i></button>
                                     </td>

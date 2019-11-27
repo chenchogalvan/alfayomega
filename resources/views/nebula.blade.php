@@ -108,7 +108,7 @@
                             <a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fas fa-cogs"></i><span class="hide-menu"> Servicios y productos</span></a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-plus"></i><span class="hide-menu">Agregar servicio</span></a></li>
+                                    <li><a href="{{ route('nebula.servicios') }}"><i class="fas fa-plus"></i><span class="hide-menu">Agregar servicio</span></a></li>
                                     <li><a href="{{ route('nebula.productos') }}"><i class="fas fa-plus"></i><span class="hide-menu">Agregar producto</span></a></li>
                                     <li><a href="#"><i class="fas fa-search"></i><span class="hide-menu">Ver servicios y productos</span></a></li>
 

@@ -18,4 +18,10 @@ class Product extends Model
         $this->attributes['name'] = $name;
         $this->attributes['slug'] = str_slug($name);
     }
+
+    public function proveedor()
+    {
+        return $this->hasMany('App\Proveedor');
+    }
+
 }

@@ -18,4 +18,6 @@ class Proveedor extends Model
         $this->attributes['name'] = $name;
         $this->attributes['url'] = str_slug($name);
     }
+
+
 }

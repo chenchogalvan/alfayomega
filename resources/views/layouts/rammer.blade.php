@@ -61,24 +61,46 @@
                             <div class="col-lg-12" style="margin-top:50px;">
                                 <div class="project-item-wrapper space__bottom--m40">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-12 space__bottom--40">
-                                            <div class="single-project-wrapper single-project-wrapper--reduced-abs">
-                                                <a class="single-project-item p-0" href="project-details.html">
-                                                    <img src="/images/martillos/excellence-line.png" class="img-fluid"
-                                                        alt="">
-                                                    <span class="single-project-title">Excellence line</span>
-                                                </a>
+                                        @forelse ($productos as $prod)
+                                            <div class="col-lg-6 col-md-6 col-12 space__bottom--40">
+                                                <div class="single-project-wrapper single-project-wrapper--reduced-abs">
+                                                    <a class="single-project-item p-0" href="{{ $prod->url }}">
+                                                        <img src="{{ Storage::url($prod->img) }}" class="img-fluid"
+                                                            alt="">
+                                                        <span class="single-project-title">{{ $prod->name }}</span>
+
+                                                    </a>
+                                                </div>
+                                                <p>{{ $prod->shortDesc }}</p>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-12 space__bottom--40">
-                                            <div class="single-project-wrapper single-project-wrapper--reduced-abs">
-                                                <a class="single-project-item p-0" href="project-details.html">
-                                                    <img src="/images/martillos/performance-line.png" class="img-fluid"
-                                                        alt="">
-                                                    <span class="single-project-title">Performance line</span>
-                                                </a>
+                                        @empty
+
+
+                                        @endforelse
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12" style="margin-top:50px;">
+                                <div class="project-item-wrapper space__bottom--m40">
+                                    <div class="row">
+                                        @forelse ($servicios as $service)
+                                            <div class="col-lg-6 col-md-6 col-12 space__bottom--40">
+                                                <div class="single-project-wrapper single-project-wrapper--reduced-abs">
+
+                                                        <span class="single-project-title">{{ $service->title }}</span>
+
+                                                </div>
+                                                <p style="text-center">{{ $service->longDesc }}</p>
                                             </div>
-                                        </div>
+                                        @empty
+
+
+                                        @endforelse
+
+
                                     </div>
                                 </div>
                             </div>
