@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Service;
+use App\Galeria;
+use App\Proveedor;
 use Illuminate\Http\Request;
 
-class ServiceController extends Controller
+class GaleriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,22 +37,33 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'   => 'required|unique:services',
-            'longDesc' => 'required'
+            'proveedor_id'  => 'required',
+            'img'    => 'required|max:2048',
         ]);
 
+        $proveedor = Proveedor::where('id', $request->get('proveedor_id'))->first();
 
-        Service::create($request->all());
-        return redirect()->back()->with('success', " ");
+        foreach ($request->file('img') as $image) {
+            $galeria = new Galeria();
+
+            $galeria->proveedor_id = $request->get('proveedor_id');
+            $galeria->img = $image->store('public/galeria/'.$proveedor->name);
+            $galeria->save();
+
+        }
+
+
+
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Service  $service
+     * @param  \App\Galeria  $galeria
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $service)
+    public function show(Galeria $galeria)
     {
         //
     }
@@ -59,10 +71,10 @@ class ServiceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Service  $service
+     * @param  \App\Galeria  $galeria
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit(Galeria $galeria)
     {
         //
     }
@@ -71,10 +83,10 @@ class ServiceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Service  $service
+     * @param  \App\Galeria  $galeria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, Galeria $galeria)
     {
         //
     }
@@ -82,10 +94,10 @@ class ServiceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Service  $service
+     * @param  \App\Galeria  $galeria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy(Galeria $galeria)
     {
         //
     }

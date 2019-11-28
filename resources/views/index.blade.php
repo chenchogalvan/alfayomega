@@ -31,6 +31,8 @@
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="/css/style.css">
 
+    @stack('css')
+
 </head>
 
 <body>
@@ -322,6 +324,9 @@
     -->
     <!-- Main JS -->
     <script src="/assets/js/main.js"></script>
+
+
+    @stack('js')
 
 </body>
 

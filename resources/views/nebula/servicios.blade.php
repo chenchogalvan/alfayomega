@@ -75,7 +75,9 @@
                         <thead>
                             <tr>
                                 <th data-sort-initial="true" data-toggle="true">Titulo</th>
+                                <th>Pertenece a:</th>
                                 <th>Descripción</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <div class="m-t-40">
@@ -93,6 +95,7 @@
                                     <td>
                                         {{ $prov->title }}
                                     </td>
+                                    <td>{{ $prov->proveedor->name }}</td>
                                     <td>{{ $prov->longDesc }} </td>
                                     <td>
                                         <button type="button" class="btn btn-small btn-outline delete-row-btn"><i class="ti-close" aria-hidden="true"></i></button>

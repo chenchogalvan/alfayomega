@@ -121,10 +121,8 @@
                             <a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fas fa-file"></i><span class="hide-menu"> Extras</span></a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-plus"></i><span class="hide-menu">Agregar galeria</span></a></li>
-                                    <li><a href="#"><i class="fas fa-search"></i><span class="hide-menu">Ver extras</span></a></li>
-
-
+                                    <li><a href="{{ route('nebula.galeria') }}"><i class="fas fa-plus"></i><span class="hide-menu">Agregar galeria</span></a></li>
+                                    {{-- <li><a href="#"><i class="fas fa-search"></i><span class="hide-menu">Ver extras</span></a></li> --}}
                                 </ul>
                             </div>
                         </li>

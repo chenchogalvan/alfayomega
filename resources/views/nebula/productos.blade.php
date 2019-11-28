@@ -104,6 +104,7 @@
                         <thead>
                             <tr>
                                 <th data-sort-initial="true" data-toggle="true">Nombre</th>
+                                <th>Pertenece a:</th>
                                 <th>Estado</th>
                                 <th data-sort-ignore="true" class="min-width">Acción</th>
                             </tr>
@@ -125,6 +126,7 @@
                                             <img src="{{ Storage::url($prov->img) }}" alt="Contact Person"> {{ $prov->name }}
                                         </div>
                                     </td>
+                                    <td>{{ $prov->proveedor->name }}</td>
                                     <td><span class="label label-table {{ $prov->show == 'yes' ? 'label-success' : 'label-danger' }}">{{ $prov->show == 'yes' ? 'Activo' : 'Inactivo' }}</span> </td>
                                     <td>
                                         <button type="button" class="btn btn-small btn-outline delete-row-btn"><i class="ti-close" aria-hidden="true"></i></button>

@@ -21,7 +21,9 @@ class Product extends Model
 
     public function proveedor()
     {
-        return $this->hasMany('App\Proveedor');
+        return $this->belongsTo('App\Proveedor');
     }
+
+
 
 }
