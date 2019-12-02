@@ -55,4 +55,10 @@ class HomeController extends Controller
         $proveedores = Proveedor::where('show', 'yes')->get();
         return view('nebula.galeria', compact('proveedores'));
     }
+
+    public function agregarCAtalogos()
+    {
+        $proveedores = Proveedor::where('show', 'yes')->get();
+        return view('nebula.catalogos', compact('proveedores'));
+    }
 }

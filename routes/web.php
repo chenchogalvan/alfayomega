@@ -11,6 +11,7 @@
 |
 */
 
+use App\Catalogo;
 use App\Galeria;
 use App\Product;
 use App\Proveedor;
@@ -41,7 +42,8 @@ Route::group(['prefix' => '/equipo-de-demolicion'], function () {
         $productos = Product::where('show', 'yes')->where('proveedor_id', $proveedor->id)->get();
         $servicios = Service::where('show', 'yes')->where('proveedor_id', $proveedor->id)->get();
         $galeria = Galeria::where('proveedor_id', $proveedor->id)->get();
-        return view('layouts.rammer', compact(['proveedor', 'prov', 'productos', 'servicios', 'galeria']));
+        $catalogo = Catalogo::where('show', 'yes')->where('proveedor_id', $proveedor->id)->get();
+        return view('layouts.rammer', compact(['proveedor', 'prov', 'productos', 'servicios', 'galeria', 'catalogo']));
     })->name('proveedores');
 
 });
@@ -69,4 +71,7 @@ Route::group(['prefix' => 'nebula'], function () {
 
     Route::get('/agregar-galeria', 'HomeController@agregarGaleria')->name('nebula.galeria');
     Route::resource('/addGallery', 'GaleriaController');
+
+    Route::get('/agregar-catalogos', 'HomeController@agregarCatalogos')->name('nebula.catalogo');
+    Route::resource('/addCatalogo', 'CatalogoController');
 });

@@ -89,7 +89,7 @@
                 <li>
                     <ul class="collapsible p-t-30">
                         <li>
-                            <a href="{{ route('nebula.dashboard') }}"><i class="material-icons">repeat</i><span class="hide-menu">Back To Home</span></a>
+                            <a href="{{ route('nebula.dashboard') }}"><i class="material-icons">repeat</i><span class="hide-menu">Regresar al dashboard</span></a>
 
                         </li>
                         <li class="small-cap"><span class="hide-menu">Pagina Web</span></li>
@@ -122,7 +122,7 @@
                             <div class="collapsible-body">
                                 <ul>
                                     <li><a href="{{ route('nebula.galeria') }}"><i class="fas fa-plus"></i><span class="hide-menu">Agregar galeria</span></a></li>
-                                    {{-- <li><a href="#"><i class="fas fa-search"></i><span class="hide-menu">Ver extras</span></a></li> --}}
+                                    <li><a href="{{ route('nebula.catalogo') }}"><i class="fas fa-file-pdf"></i><span class="hide-menu">Agregar catalogos</span></a></li>
                                 </ul>
                             </div>
                         </li>

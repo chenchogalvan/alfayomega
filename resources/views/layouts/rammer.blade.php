@@ -7,11 +7,11 @@
         <div class="row">
             <div class="col">
                 <div class="page-breadcrumb-content text-center">
-                    <h1>Rammer</h1>
+                    <h1>{{ $proveedor->name }}</h1>
                     <ul class="page-breadcrumb-links">
                         <li><a href="/">Inicio</a></li>
                         <li><a href="{{ route('equipo') }}">Equipos de demolicion</a></li>
-                        <li>Rammer</li>
+                        <li>{{ $proveedor->name }}</li>
                     </ul>
                 </div>
             </div>
@@ -87,7 +87,12 @@
                                 <div class="project-item-wrapper space__bottom--m40">
                                     <div class="row">
                                         <div class="wrapper">
+                                            @if (count($galeria) >= 1)
                                             <h1>Servicios y/o refacciones</h1>
+
+
+                                            @else
+                                            @endif
                                             <ul class="tabs clearfix" data-tabgroup="first-tab-group">
                                                 @foreach ($servicios as $serv)
                                                 <li><a href="#{{ str_slug($serv->title) }}" @if ($loop->first) class="active" @endif >{{ $serv->title }}</a></li>
@@ -117,9 +122,17 @@
                             <div class="col-lg-12" style="margin: 50px 0;">
                                 <div class="project-item-wrapper space__bottom--m40">
                                     <div class="col-12">
+                                        @if (count($galeria) >= 1)
+                                        <h1 style="margin: 20px 0;">Galeria</h1>
+
+                                        @else
+                                        @endif
+
                                         <div class="row row-5 image-popup">
-                                            <h1 style="margin: 20px 0;">Servicios y/o refacciones</h1>
+
+
                                             @foreach ($galeria as $galeria)
+
                                                 <div class="col-xl-4 col-lg-4 col-sm-6 col-12 space__top--10">
                                                     <a href="{{ Storage::url($galeria->img) }}" class="gallery-item single-gallery-thumb"><img src="{{ Storage::url($galeria->img) }}" class="img-fluid" alt=""><span class="plus"></span></a>
                                                 </div>
@@ -146,9 +159,15 @@
                     </ul>
                 </div>
                 <div class="sidebar">
-                    <h3 class="sidebar-title">Descarga nuestra presentación</h3>
+                    <h3 class="sidebar-title">Ver catalogos</h3>
                     <ul class="sidebar-list">
-                        <li><a href="#"><i class="fa fa-file-pdf-o"></i>presentacion.PDF</a></li>
+                        @forelse ($catalogo as $c)
+                        <li><a href="{{ Storage::url($c->url) }}" target="_blank"><i class="fa fa-file-pdf-o"></i>{{ $c->title }}</a></li>
+                        @empty
+                        <li>No hay catalogos para {{ $proveedor->name }}</li>
+                        @endforelse
+
+
                     </ul>
                 </div>
             </div>

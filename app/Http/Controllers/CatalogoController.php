@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Galeria;
+use App\Catalogo;
 use App\Proveedor;
 use Illuminate\Http\Request;
 
-class GaleriaController extends Controller
+class CatalogoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -38,35 +38,26 @@ class GaleriaController extends Controller
     {
         $request->validate([
             'proveedor_id'  => 'required',
-            'img'    => 'required|max:2048',
+            'title' => 'required|unique:catalogos',
+            'url' => 'required'
         ]);
 
         $proveedor = Proveedor::where('id', $request->get('proveedor_id'))->first();
 
-        foreach ($request->file('img') as $image) {
-            $galeria = new Galeria();
-
-            $galeria->proveedor_id = $request->get('proveedor_id');
-            $galeria->img = $image->store('public/galeria/'.$proveedor->name);
-            $galeria->save();
-
-        }
-
+        $catalogo = Catalogo::create($request->all());
+        $catalogo->url = $request->file('url')->store('public/catalogo/'.$proveedor->name);
+        $catalogo->save();
 
         return redirect()->back()->with('success', " ");
-
-
-
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Galeria  $galeria
+     * @param  \App\Catalogo  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function show(Galeria $galeria)
+    public function show(Catalogo $catalogo)
     {
         //
     }
@@ -74,10 +65,10 @@ class GaleriaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Galeria  $galeria
+     * @param  \App\Catalogo  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Galeria $galeria)
+    public function edit(Catalogo $catalogo)
     {
         //
     }
@@ -86,10 +77,10 @@ class GaleriaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Galeria  $galeria
+     * @param  \App\Catalogo  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Galeria $galeria)
+    public function update(Request $request, Catalogo $catalogo)
     {
         //
     }
@@ -97,10 +88,10 @@ class GaleriaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Galeria  $galeria
+     * @param  \App\Catalogo  $catalogo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Galeria $galeria)
+    public function destroy(Catalogo $catalogo)
     {
         //
     }
