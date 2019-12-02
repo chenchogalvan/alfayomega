@@ -44,7 +44,7 @@
                         <div class="service-gallery__wrapper">
                             <div class="service-gallery__single-slide">
                                 <div class="item">
-                                    <img src="/images/slider.png" class="img-fluid" alt="">
+                                    <img src="{{ Storage::url($proveedor->imgPortada) }}" class="img-fluid" alt="">
                                 </div>
                             </div>
                         </div>
