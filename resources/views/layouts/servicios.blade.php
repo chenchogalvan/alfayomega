@@ -65,7 +65,7 @@
                         <p class="cta-block__light-text text-center">Más de <span>7</span> años</p>
                         <p class="cta-block__semi-bold-text cta-block__semi-bold-text--medium text-center">¿Tienes un
                             proyecto? Contactanos</p>
-                        <p class="cta-block__bold-text text-center">+98565 569 874</p>
+                        <p class="cta-block__bold-text text-center">(844) 418.1119</p>
                     </div>
                 </div>
             </div>

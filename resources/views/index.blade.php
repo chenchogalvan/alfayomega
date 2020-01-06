@@ -51,14 +51,14 @@
                             <div class="header-top-info">
                                 <span class="header-top-info__image pr-1"><img src="assets/img/icons/phone.png"
                                         alt=""></span>
-                                <span class="header-top-info__text">01225 265 847</span>
+                                <span class="header-top-info__text">(844) 418.1119</span>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="header-top-info text-center">
                                 <span class="header-top-info__image pr-1"><img src="assets/img/icons/clock.png"
                                         alt=""></span>
-                                <span class="header-top-info__text">9.00 am - 11.00 pm</span>
+                                <span class="header-top-info__text">9.00 am - 6.00 pm</span>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -246,18 +246,19 @@
                         <div class="footer-contact-wrapper">
                             <div class="single-footer-contact">
                                 <div class="single-footer-contact__icon"><i class="fa fa-map-marker"></i></div>
-                                <div class="single-footer-contact__text">999 calle, colonia. Saltillo Coahuila
+                                <div class="single-footer-contact__text">Calle 2 # 2644, Miguel Hidalgo, 25096 Saltillo, Coah.
                                 </div>
                             </div>
                             <div class="single-footer-contact">
                                 <div class="single-footer-contact__icon"><i class="fa fa-phone"></i></div>
-                                <div class="single-footer-contact__text"> <a href="tel:98548658125">+98548 658 125</a>
+                                <div class="single-footer-contact__text"> <a href="tel:98548658125">(844) 418.1119</a>
                                 </div>
                             </div>
                             <div class="single-footer-contact">
-                                <div class="single-footer-contact__icon"><i class="fa fa-globe"></i></div>
+                                <div class="single-footer-contact__icon"><i class="fa fa-envelope"></i></div>
                                 <div class="single-footer-contact__text"><a
-                                        href="mailto:info@example.com">info@example.com</a> </div>
+                                        href="mailto:contacto@alfayomegaservices.com">contacto@alfayomegaservices.com</a><br><a
+                                        href="mailto:servicio@alfayomegaservices.com">servicio@alfayomegaservices.com</a> </div>
                             </div>
                         </div>
                     </div>

@@ -329,7 +329,7 @@
                     <div class="cta-block__inner background-color--default-light-overlay space__inner--ry100">
                         <p class="cta-block__light-text text-center">Más de <span>7</span> años</p>
                         <p class="cta-block__semi-bold-text text-center">¿Quieres más información? <br> Llamános</p>
-                        <p class="cta-block__bold-text text-center">+98565 569 874</p>
+                        <p class="cta-block__bold-text text-center">(844) 418.1119</p>
                     </div>
                 </div>
             </div>
@@ -393,4 +393,34 @@
 </div>
 <!--====================  End of testimonial cta area  ====================-->
 
+
+<div class="brand-logo-area space__bottom--r120">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- brand logo slider -->
+                <div class="brand-logo-wrapper">
+                    <div class="single-brand-logo">
+                        <a href="#"><img src="assets/img/brand-logo/logo1.png" class="img-fluid" alt=""></a>
+                    </div>
+                    <div class="single-brand-logo">
+                        <a href="#"><img src="assets/img/brand-logo/logo2.png" class="img-fluid" alt=""></a>
+                    </div>
+                    <div class="single-brand-logo">
+                        <a href="#"><img src="assets/img/brand-logo/logo3.png" class="img-fluid" alt=""></a>
+                    </div>
+                    <div class="single-brand-logo">
+                        <a href="#"><img src="assets/img/brand-logo/logo4.png" class="img-fluid" alt=""></a>
+                    </div>
+                    <div class="single-brand-logo">
+                        <a href="#"><img src="assets/img/brand-logo/logo5.png" class="img-fluid" alt=""></a>
+                    </div>
+                    <div class="single-brand-logo">
+                        <a href="#"><img src="assets/img/brand-logo/logo4.png" class="img-fluid" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
