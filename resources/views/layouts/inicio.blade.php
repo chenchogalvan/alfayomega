@@ -340,7 +340,7 @@
                     <h2 class="section-title__title">¿que dicen nuestros clientes?</h2>
                 </div>
                 <!-- testimonial slider -->
-                <div class="testimonial-slider-wrapper space__inner__bottom__md--30  space__inner__bottom__lm--30">
+                {{-- <div class="testimonial-slider-wrapper space__inner__bottom__md--30  space__inner__bottom__lm--30">
                     <div class="single-testimonial text-center">
                         <p class="single-testimonial__text space__bottom--40"> <span class="quote-left">"</span>
                             Publishing packages and web page editors now use Lorem Ipsum as their default model
@@ -386,7 +386,7 @@
                         <h5 class="single-testimonial__author">Jonathon Doe</h5>
                         <p class="single-testimonial__author-des">CIO, Oct Group</p>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -401,22 +401,25 @@
                 <!-- brand logo slider -->
                 <div class="brand-logo-wrapper">
                     <div class="single-brand-logo">
-                        <a href="#"><img src="assets/img/brand-logo/logo1.png" class="img-fluid" alt=""></a>
+                        <a href="#"><img src="/images/logos/agronaut.jpg" class="img-fluid" alt=""></a>
                     </div>
                     <div class="single-brand-logo">
-                        <a href="#"><img src="assets/img/brand-logo/logo2.png" class="img-fluid" alt=""></a>
+                        <a href="#"><img src="/images/logos/americas.jpg" class="img-fluid" alt=""></a>
                     </div>
                     <div class="single-brand-logo">
-                        <a href="#"><img src="assets/img/brand-logo/logo3.png" class="img-fluid" alt=""></a>
+                        <a href="#"><img src="/images/logos/fresnillo.jpg" class="img-fluid" alt=""></a>
                     </div>
                     <div class="single-brand-logo">
-                        <a href="#"><img src="assets/img/brand-logo/logo4.png" class="img-fluid" alt=""></a>
+                        <a href="#"><img src="/images/logos/grupomexico.jpg" class="img-fluid" alt=""></a>
                     </div>
                     <div class="single-brand-logo">
-                        <a href="#"><img src="assets/img/brand-logo/logo5.png" class="img-fluid" alt=""></a>
+                        <a href="#"><img src="/images/logos/lh.jpg" class="img-fluid" alt=""></a>
                     </div>
                     <div class="single-brand-logo">
-                        <a href="#"><img src="assets/img/brand-logo/logo4.png" class="img-fluid" alt=""></a>
+                        <a href="#"><img src="/images/logos/minera.jpg" class="img-fluid" alt=""></a>
+                    </div>
+                    <div class="single-brand-logo">
+                        <a href="#"><img src="/images/logos/penoles.jpg" class="img-fluid" alt=""></a>
                     </div>
                 </div>
             </div>
