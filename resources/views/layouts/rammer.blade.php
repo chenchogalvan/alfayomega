@@ -87,7 +87,7 @@
                                 <div class="project-item-wrapper space__bottom--m40">
                                     <div class="row">
                                         <div class="wrapper">
-                                            @if (count($galeria) >= 1)
+                                            @if (count($servicios) >= 1)
                                             <h1>Servicios y/o refacciones</h1>
 
 

@@ -10,10 +10,10 @@
         <div class="row">
             <div class="col">
                 <div class="page-breadcrumb-content text-center">
-                    <h1>Equipos de demolicion</h1>
+                    <h1>Equipos de demolición</h1>
                     <ul class="page-breadcrumb-links">
                         <li><a href="#">Inicio</a></li>
-                        <li>Equipos de demolicion</li>
+                        <li>Equipos de demolición</li>
                     </ul>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                     <!-- section title -->
                     <div class="section-title space__bottom--25">
                         {{-- <h3 class="section-title__sub">Science 1982</h3> --}}
-                        <h2 class="section-title__title">Martillos hidraulicos y equipo de demolicion</h2>
+                        <h2 class="section-title__title">Martillos hidráulicos y equipo de demolición</h2>
                     </div>
                     <p class="about-content__text space__bottom--40">Tenemos la amplia experiencia en una gama de
                         equipos y algunos de ellos son las marcas Rammer, Bretec, BTI, Boart Longyear, Allied, en donde

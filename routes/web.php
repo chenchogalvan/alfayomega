@@ -18,7 +18,7 @@ use App\Proveedor;
 use App\Service;
 
 Route::get('/', function () {
-    $proveedores = Proveedor::where([['show', 'yes'],['principal', 'NO']])->get();
+    $proveedores = Proveedor::where([['show', 'yes'],['principal', 'SI']])->get();
     return view('layouts.inicio', compact('proveedores'));
     //return view('welcome');
 });
