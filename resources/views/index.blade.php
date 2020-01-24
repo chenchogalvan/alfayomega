@@ -80,7 +80,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-lg-2">
                                             <div class="brand-logo">
-                                                <a href="index.html">
+                                                <a href="/">
                                                     <img src="/images/logo2.png" class="img-fluid" alt="">
                                                 </a>
                                             </div>
