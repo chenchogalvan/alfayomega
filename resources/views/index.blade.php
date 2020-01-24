@@ -331,6 +331,7 @@
 
 	
 	<!-- Load Facebook SDK for JavaScript -->
+
       <div id="fb-root"></div>
       <script>
         window.fbAsyncInit = function() {
@@ -351,9 +352,11 @@
       <!-- Your customer chat code -->
       <div class="fb-customerchat"
         attribution=setup_tool
-        page_id="778478712199357">
+			page_id="778478712199357"
+		<!--theme_color="#ff7e29"-->
+		logged_in_greeting="¡Hola! ¿En que podemos ayudarte? "
+		logged_out_greeting="¡Hola! ¿En que podemos ayudarte? ">
       </div>
-     
 </body>
 
 </html>
