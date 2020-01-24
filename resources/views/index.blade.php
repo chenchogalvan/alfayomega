@@ -356,7 +356,7 @@
 		<!--theme_color="#ff7e29"-->
 		logged_in_greeting="¡Hola! ¿En que podemos ayudarte? "
 		logged_out_greeting="¡Hola! ¿En que podemos ayudarte? "
-		greeting_dialog_display="hide">
+		greeting_dialog_display=hide>
       </div>
 </body>
 
