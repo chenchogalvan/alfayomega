@@ -357,8 +357,7 @@ window.fbAsyncInit = function() {
   <!--theme_color="#ff7e29"-->
     <!--logged_in_greeting="¿HOLA EN QUE PODEMOS AYUDARTE?"
     logged_out_greeting="¿HOLA EN QUE PODEMOS AYUDARTE?"-->
-	greeting_dialog_display=hide
-	greeting_dialog_delay=0>
+	greeting_dialog_display='hide'>
 </div>
 </body>
 
