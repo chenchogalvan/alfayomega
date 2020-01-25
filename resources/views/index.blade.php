@@ -355,10 +355,10 @@ window.fbAsyncInit = function() {
   attribution=install_email
   page_id="778478712199357"
   <!--theme_color="#ff7e29"-->
-    logged_in_greeting="¿HOLA EN QUE PODEMOS AYUDARTE?"
-    logged_out_greeting="¿HOLA EN QUE PODEMOS AYUDARTE?"
-	greeting_dialog_display="fade"
-	greeting_dialog_delay="1000000">
+    <!--logged_in_greeting="¿HOLA EN QUE PODEMOS AYUDARTE?"
+    logged_out_greeting="¿HOLA EN QUE PODEMOS AYUDARTE?"-->
+	greeting_dialog_display=fade
+	greeting_dialog_delay=1000000>
 </div>
 </body>
 
