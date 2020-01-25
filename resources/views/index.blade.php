@@ -354,7 +354,7 @@ window.fbAsyncInit = function() {
 <div class="fb-customerchat"
   attribution=install_email
   page_id="778478712199357"
-	greeting_dialog_display="hide">
+	greeting_dialog_display=hide>
 </div>
 </body>
 
