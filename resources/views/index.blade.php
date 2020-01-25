@@ -338,7 +338,8 @@
 window.fbAsyncInit = function() {
   FB.init({
     xfbml            : true,
-    version          : 'v5.0'
+    version          : 'v5.0',
+	greeting_dialog_display : false
   });
 };
 
@@ -353,8 +354,7 @@ window.fbAsyncInit = function() {
 <!-- Your customer chat code -->
 <div class="fb-customerchat"
   attribution=install_email
-  page_id="778478712199357"
-	greeting_dialog_display=hide>
+  page_id="778478712199357">
 </div>
 </body>
 
