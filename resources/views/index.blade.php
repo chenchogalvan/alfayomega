@@ -352,12 +352,7 @@ window.fbAsyncInit = function() {
 
 <!-- Your customer chat code -->
 <div class="fb-customerchat"
-  attribution=install_email
-  page_id="778478712199357"
-  theme_color="#ff7e29"
-  logged_in_greeting="¿hola en que podemos ayudarte?"
-  logged_out_greeting="¿hola en que podemos ayudarte?"
-	greeting_dialog_display="hide">
+  page_id="778478712199357">
 </div>
 </body>
 
