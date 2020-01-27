@@ -329,7 +329,7 @@
 
     @stack('js')
 
-	
+
 	<!-- Load Facebook SDK for JavaScript -->
 
       <!-- Load Facebook SDK for JavaScript -->
@@ -356,7 +356,8 @@ window.fbAsyncInit = function() {
   page_id="778478712199357"
   theme_color="#ff7e29"
   logged_in_greeting="¿hola en que podemos ayudarte?"
-  logged_out_greeting="¿hola en que podemos ayudarte?">
+  logged_out_greeting="¿hola en que podemos ayudarte?"
+  greeting_dialog_display="hide">
 </div>
 </body>
 
