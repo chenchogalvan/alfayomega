@@ -102,6 +102,6 @@ class GaleriaController extends Controller
      */
     public function destroy(Galeria $galeria)
     {
-        //
+        return 'hola';
     }
 }

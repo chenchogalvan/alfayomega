@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\Proveedor;
 use App\Service;
+use App\Galeria;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -54,6 +55,14 @@ class HomeController extends Controller
     {
         $proveedores = Proveedor::where('show', 'yes')->get();
         return view('nebula.galeria', compact('proveedores'));
+    }
+
+    public function editarGaleria($id)
+    {
+        $proveedor = Proveedor::find($id);
+        $galeria = Galeria::where('proveedor_id', $proveedor->id)->get();
+        return view('nebula.galeriaEditar', compact(['proveedor', 'galeria']));
+
     }
 
     public function agregarCAtalogos()
