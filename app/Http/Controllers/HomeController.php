@@ -27,7 +27,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('nebula.dashboard');
+        $proveedores = Proveedor::all()->count();
+        $productos = Product::all()->count();
+        $servicios = Service::all()->count();
+        return view('nebula.dashboard', compact(['proveedores', 'productos', 'servicios']));
+
     }
 
     public function agregarProveedor()
