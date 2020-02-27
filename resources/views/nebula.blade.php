@@ -122,6 +122,7 @@
                             <div class="collapsible-body">
                                 <ul>
                                     <li><a href="{{ route('nebula.galeria') }}"><i class="fas fa-plus"></i><span class="hide-menu">Agregar galeria</span></a></li>
+                                    <li><a href="{{ route('nebula.galeria.ver') }}"><i class="fas fa-edit"></i><span class="hide-menu">Editar galeria</span></a></li>
                                     <li><a href="{{ route('nebula.catalogo') }}"><i class="fas fa-file-pdf"></i><span class="hide-menu">Agregar catalogos</span></a></li>
                                 </ul>
                             </div>

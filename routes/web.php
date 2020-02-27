@@ -72,6 +72,8 @@ Route::group(['prefix' => 'nebula'], function () {
 
     Route::get('/agregar-galeria', 'HomeController@agregarGaleria')->name('nebula.galeria');
     Route::get('/editar-galeria/{id}', 'HomeController@editarGaleria')->name('nebula.galeria.editar');
+    Route::get('/editar-galeria', 'HomeController@verGaleria')->name('nebula.galeria.ver');
+    Route::delete('/eliminar-galeria/{id}', 'HomeController@eliminarGaleria')->name('nebula.galeria.eliminar');
     Route::resource('/addGallery', 'GaleriaController');
 
     Route::get('/agregar-catalogos', 'HomeController@agregarCatalogos')->name('nebula.catalogo');

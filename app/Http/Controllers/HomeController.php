@@ -7,6 +7,8 @@ use App\Proveedor;
 use App\Service;
 use App\Galeria;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class HomeController extends Controller
 {
@@ -73,5 +75,20 @@ class HomeController extends Controller
     {
         $proveedores = Proveedor::where('show', 'yes')->get();
         return view('nebula.catalogos', compact('proveedores'));
+    }
+
+    public function verGaleria()
+    {
+        $proveedor = Proveedor::all();
+
+        return view('nebula.galeriaVer', compact('proveedor'));
+    }
+
+    public function eliminarGaleria(Request $request)
+    {
+        $g = Galeria::where('id', $request->id)->first();
+        Storage::delete($g->img);
+        $g->delete();
+        return redirect()->back()->with('flash', '');
     }
 }

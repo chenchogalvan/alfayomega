@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Galeria;
 use App\Proveedor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class GaleriaController extends Controller
 {
@@ -100,8 +102,8 @@ class GaleriaController extends Controller
      * @param  \App\Galeria  $galeria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Galeria $galeria)
+    public function destroy(Request $request)
     {
-        return 'hola';
+
     }
 }
