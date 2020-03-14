@@ -98,7 +98,6 @@
                             <div class="collapsible-body">
                                 <ul>
                                     <li><a href="{{ route('nebula.proveedores') }}"><i class="material-icons">person_add</i><span class="hide-menu">Nuevo</span></a></li>
-                                    <li><a href="#"><i class="fas fa-search"></i><span class="hide-menu">Ver proveedores</span></a></li>
 
                                 </ul>
                             </div>

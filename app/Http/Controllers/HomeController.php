@@ -38,7 +38,8 @@ class HomeController extends Controller
 
     public function agregarProveedor()
     {
-        return view('nebula.proveedor');
+        $proveedores = Proveedor::all();
+        return view('nebula.proveedor', compact('proveedores'));
     }
 
 

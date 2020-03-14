@@ -17,11 +17,12 @@
 
                 @endif
 
-                <form enctype="multipart/form-data" action="{{ route('addProveedors.store') }}" method="POST">
+                <form enctype="multipart/form-data" action="{{ route('addProveedors.update', $proveedor->id) }}" method="POST">
+                    @method('PUT')
                     @csrf
                     <div class="row">
                         <div class="input-field col s12 m12 l12">
-                            <input name="name" id="first_name" value=" {{ old('name') }} " type="text">
+                            <input name="name" id="first_name" value=" {{ old('name', $proveedor->name) }} " type="text">
                             <label for="first_name">Proveedor</label>
                             @error('name')
                             <span class="invalid-feedback" role="alert">
@@ -78,7 +79,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <textarea name="shortDesc" id="message5" class="materialize-textarea" data-length="60"
-                                cols="30">{{ old('shortDesc') }}</textarea>
+                                cols="30">{{ old('shortDesc', $proveedor->shortDesc) }}</textarea>
                             <label for="message5">Descripción corta</label>
                             @error('shortDesc')
                             <span class="invalid-feedback" role="alert">
@@ -93,7 +94,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <textarea name="longDesc" id="message5" class="materialize-textarea"
-                                length="120"> {{ old('longDesc') }} </textarea>
+                                length="120"> {{ old('longDesc', $proveedor->longDesc) }} </textarea>
                             <label for="message5">Descripción completa</label>
                             @error('longDesc')
                             <span class="invalid-feedback" role="alert">
@@ -112,50 +113,6 @@
                         </div>
                     </div>
                 </form>
-
-            </div>
-        </div>
-    </div>
-    <div class="col s12 l6">
-        <div class="card">
-            <div class="card-content">
-                <h5 class="card-title activator">Lista de proveedores</h5>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Estado</th>
-                            <th>Accion</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        @forelse ($proveedores as $proveedor)
-
-                        <tr>
-                            <td>
-                                <div class="chip">
-                                    <img src=" {{ Storage::url($proveedor->imgLogo) }} " alt="Contact Person"> {{ $proveedor->name }}
-                                </div>
-                            </td>
-                            <td>
-                                {!! $proveedor->show = 'yes' ? '<span class="label label-success">Activo</span>' : '<span class="label label-danger">Inactivo</span>' !!}
-                            </td>
-                            <td>
-
-                                <a href=" {{ route('addProveedors.edit', $proveedor->id) }} " class="btn btn-small btn-outline delete-row-btn"><i
-                                        class="ti-pencil" aria-hidden="true"></i></a>
-                            </td>
-                        </tr>
-                        @empty
-
-                        @endforelse
-
-
-                    </tbody>
-                </table>
-
 
             </div>
         </div>

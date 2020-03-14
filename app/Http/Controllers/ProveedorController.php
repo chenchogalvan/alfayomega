@@ -60,7 +60,7 @@ class ProveedorController extends Controller
      */
     public function show(Proveedor $proveedor)
     {
-        //
+        return $proveedor;
     }
 
     /**
@@ -69,9 +69,10 @@ class ProveedorController extends Controller
      * @param  \App\Proveedor  $proveedor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Proveedor $proveedor)
+    public function edit($id)
     {
-        //
+        $proveedor = Proveedor::find($id);
+        return view('nebula.proveedorEdit', compact('proveedor'));
     }
 
     /**
@@ -81,9 +82,32 @@ class ProveedorController extends Controller
      * @param  \App\Proveedor  $proveedor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Proveedor $proveedor)
+    public function update(Request $request, $id)
     {
-        //
+        $proveedor = Proveedor::find($id);
+
+        $request->validate([
+            'name'  => 'required|unique:proveedors,url,'.$proveedor->id,
+            'shortDesc' => 'required|max:60',
+            'longDesc'  => 'required',
+        ]);
+
+        $proveedor->name = $request->get('name');
+        $proveedor->shortDesc = $request->get('shortDesc');
+        $proveedor->longDesc = $request->get('longDesc');
+
+        if ($request->hasFile('imgLogo')) {
+            $proveedor->imgLogo = $request->file('imgLogo')->store('public/logosProveedores');
+        }
+
+        if ($request->hasFile('imgPortada')) {
+            $proveedor->imgPortada = $request->file('imgPortada')->store('public/portadaProveedores');
+        }
+
+        $proveedor->save();
+
+
+        return redirect()->back()->with('success', " ");
     }
 
     /**
