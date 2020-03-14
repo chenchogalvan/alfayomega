@@ -400,25 +400,25 @@
             <div class="col-lg-12">
                 <!-- brand logo slider -->
                 <div class="brand-logo-wrapper">
-                    <div class="single-brand-logo">
+                    <div class="1">
                         <a href="#"><img src="/images/logos/agronaut.jpg" class="img-fluid" alt=""></a>
                     </div>
-                    <div class="single-brand-logo">
+                    <div class="single-brand-logo1">
                         <a href="#"><img src="/images/logos/americas.jpg" class="img-fluid" alt=""></a>
                     </div>
-                    <div class="single-brand-logo">
+                    <div class="single-brand-logo1">
                         <a href="#"><img src="/images/logos/fresnillo.jpg" class="img-fluid" alt=""></a>
                     </div>
-                    <div class="single-brand-logo">
+                    <div class="single-brand-logo1">
                         <a href="#"><img src="/images/logos/grupomexico.jpg" class="img-fluid" alt=""></a>
                     </div>
-                    <div class="single-brand-logo">
+                    <div class="single-brand-logo1">
                         <a href="#"><img src="/images/logos/lh.jpg" class="img-fluid" alt=""></a>
                     </div>
-                    <div class="single-brand-logo">
+                    <div class="single-brand-logo1">
                         <a href="#"><img src="/images/logos/minera.jpg" class="img-fluid" alt=""></a>
                     </div>
-                    <div class="single-brand-logo">
+                    <div class="single-brand-logo1">
                         <a href="#"><img src="/images/logos/penoles.jpg" class="img-fluid" alt=""></a>
                     </div>
                 </div>
