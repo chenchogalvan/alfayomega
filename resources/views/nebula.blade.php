@@ -123,11 +123,12 @@
                                     <li><a href="{{ route('nebula.galeria') }}"><i class="fas fa-plus"></i><span class="hide-menu">Agregar galeria</span></a></li>
                                     <li><a href="{{ route('nebula.galeria.ver') }}"><i class="fas fa-edit"></i><span class="hide-menu">Editar galeria</span></a></li>
                                     <li><a href="{{ route('nebula.catalogo') }}"><i class="fas fa-file-pdf"></i><span class="hide-menu">Agregar catalogos</span></a></li>
+                                    <li><a href="#"><i class="fas fa-file-pdf"></i><span class="hide-menu">Lista de mensajes</span></a></li>
                                 </ul>
                             </div>
                         </li>
 
-                        <li>
+                        {{-- <li>
                             <a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fas fa-list-alt"></i><span class="hide-menu"> Secciones</span></a>
                             <div class="collapsible-body">
                                 <ul>
@@ -138,9 +139,9 @@
 
                                 </ul>
                             </div>
-                        </li>
+                        </li> --}}
 
-                        <li class="small-cap"><span class="hide-menu">Información de contacto</span></li>
+                        {{-- <li class="small-cap"><span class="hide-menu">Información de contacto</span></li> --}}
                     </ul>
                 </li>
             </ul>
